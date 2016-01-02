@@ -10,6 +10,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN mkdir /etc/supervisor/conf.d/supervisord.conf.d
 ADD entrypoint.sh /
-ADD entrypoint.d/ /
+ADD entrypoint.d/ /entrypoint.d
 ADD php-fpm.conf /etc/php5/fpm/
 CMD ["/entrypoint.sh"]
