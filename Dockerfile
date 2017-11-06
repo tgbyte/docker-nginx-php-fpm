@@ -1,4 +1,4 @@
-FROM nginx:1.9
+FROM nginx:stable
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
   supervisor php5-fpm php5-cli && apt-get clean && rm -rf /var/lib/apt/lists/* \
